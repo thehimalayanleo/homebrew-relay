@@ -21,7 +21,7 @@ class Relay < Formula
     log_path var/"log/relay.log"
     error_log_path var/"log/relay.log"
     environment_variables RELAY_DATA_DIR: var/"relay/data",
-                          RELAY_POD_DIR: var/"relay/pods"
+                          RELAY_POD_DIR:  var/"relay/pods"
   end
 
   def caveats

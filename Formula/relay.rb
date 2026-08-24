@@ -1,16 +1,16 @@
 class Relay < Formula
   desc "Shared workspaces and verified handoffs for people and AI agents"
   homepage "https://github.com/thehimalayanleo/relay"
-  url "https://github.com/thehimalayanleo/relay/archive/cff60f1f2ce040520fb881dd12a76e4584ac7bbf.tar.gz"
+  url "https://github.com/thehimalayanleo/relay/archive/e7ab52609dadb3171a6260744f7faebaae14b711.tar.gz"
   version "0.1.0"
-  sha256 "613172909ec5ec7b8faf8e1886a58346c33e838506fc3d5f849801dab468d0ee"
+  sha256 "36c7f1e0448b0abaa45fcf58ef6e23e6fe697158ee2af0848d89ab0a7b4fa6b7"
   license "MIT"
 
   depends_on "node@22"
 
   def install
     system "npm", "install", *std_npm_args
-    node_path = "#{Formula["node@22"].opt_bin}:$PATH"
+    node_path = "#{formula_opt_bin("node@22")}:$PATH"
     (bin/"relay").write_env_script libexec/"bin/relay", PATH: node_path
     (bin/"relay-core").write_env_script libexec/"bin/relay-core", PATH: node_path
     (bin/"relay-opencode-runner").write_env_script libexec/"bin/relay-opencode-runner", PATH: node_path

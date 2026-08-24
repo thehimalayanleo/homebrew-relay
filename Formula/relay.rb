@@ -1,9 +1,9 @@
 class Relay < Formula
   desc "Shared workspaces and verified handoffs for people and AI agents"
   homepage "https://github.com/thehimalayanleo/relay"
-  url "https://github.com/thehimalayanleo/relay/archive/4ea214f.tar.gz"
+  url "https://github.com/thehimalayanleo/relay/archive/59ba51d.tar.gz"
   version "0.1.0"
-  sha256 "ceeecf578704cc54ebc834093e1ba7e91749e851eada401c515114f9925c1e46"
+  sha256 "020159ec6faacdb129deda30d83a7f5f529b9470eb66b6d47aa727197be68b3c"
   license "MIT"
 
   depends_on "node"

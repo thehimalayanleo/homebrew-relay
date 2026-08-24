@@ -11,9 +11,9 @@ class Relay < Formula
   def install
     system "npm", "install", *std_npm_args
     node_path = "#{Formula["node@22"].opt_bin}:$PATH"
-    bin.write_env_script libexec/"bin/relay", PATH: node_path
-    bin.write_env_script libexec/"bin/relay-core", PATH: node_path
-    bin.write_env_script libexec/"bin/relay-opencode-runner", PATH: node_path
+    (bin/"relay").write_env_script libexec/"bin/relay", PATH: node_path
+    (bin/"relay-core").write_env_script libexec/"bin/relay-core", PATH: node_path
+    (bin/"relay-opencode-runner").write_env_script libexec/"bin/relay-opencode-runner", PATH: node_path
   end
 
   service do
